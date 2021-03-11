@@ -136,7 +136,7 @@ function StoreNearbyVehicle(playerCoords)
 		return
 	end
 
-	ESX.TriggerServerCallback('esx_policejob:storeNearbyVehicle', function(storeSuccess, foundNum)
+	ESX.TriggerServerCallback('l_police:storeNearbyVehicle', function(storeSuccess, foundNum)
 		if storeSuccess then
 			local vehicleId = vehiclePlates[foundNum]
 			local attempts = 0
@@ -225,7 +225,7 @@ function OpenShopMenu(elements, restoreCoords, shopCoords)
 				local props    = ESX.Game.GetVehicleProperties(vehicle)
 				props.plate    = newPlate
 
-				ESX.TriggerServerCallback('esx_policejob:buyJobVehicle', function (bought)
+				ESX.TriggerServerCallback('l_police:buyJobVehicle', function (bought)
 					if bought then
 						ESX.ShowNotification(_U('vehicleshop_bought', data.current.name, ESX.Math.GroupDigits(data.current.price)))
 

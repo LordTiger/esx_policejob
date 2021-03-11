@@ -1,8 +1,8 @@
-fx_version 'adamant'
+fx_version 'bodacious'
 
 game 'gta5'
 
-description 'ESX Police Job'
+description 'LordTigers Modified Police Job'
 
 version '1.3.0'
 
